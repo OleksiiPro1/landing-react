@@ -1,10 +1,32 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import myVideo from './1.mp4';
+import myVideoComponent from './video.js';
+
+const divPStyle = css`
+  max-width: 500px;
+  margin-top: 16px;
+  font-family: 'TWK Lausanne', sans-serif;
+  color: #fff;
+  font-size: 22px;
+  line-height: 32.5px;
+  font-weight: 200;
+`;
 
 const imageStyles = css`
   display: flex;
 `;
-
+const divH1Styles = css`
+  background-color: grey;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 230px;
+  margin-left: 100px;
+`;
 const h2Styles = css`
   margin-top: 300px;
   font-size: 52px;
@@ -17,12 +39,20 @@ const h1Styles = css`
   color: #fff;
   font-size: 100px;
   line-height: 92px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -1px;
 `;
 const headerStyles = css`
+  background-color: grey;
+  padding-right: 5%;
+  padding-left: 5%;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  left: 0%;
+  top: 75px;
+  right: 0%;
+  bottom: auto;
 `;
 const navigationMenu = css`
   list-style-type: none;
@@ -43,7 +73,7 @@ const navigationMenu = css`
 
 const mainStyles = css``;
 const wrapperStyles = css`
-  margin-top: -500px;
+  margin-top: 0px;
   width: 100%;
 `;
 function App() {
@@ -51,6 +81,7 @@ function App() {
     <div css={mainStyles}>
       <main>
         <div css={wrapperStyles}>
+          <myVideoComponent />
           <header css={headerStyles}>
             <svg
               width="34"
@@ -89,17 +120,21 @@ function App() {
             </nav>
           </header>
           <selection></selection>
-          <div>
+          <div css={divH1Styles}>
             <h1 css={h1Styles}>
               Freedom behind
               <br /> the wheel.
             </h1>
+            <div css={divPStyle}>
+              Ghost is building the attention-free self-driving platform for a
+              new generation of consumer cars.
+            </div>
           </div>
         </div>
         <div>
           <h2 css={h2Styles}>
             The first self-driving system so safe <br />
-            that it doesn’t need your attention.
+            that it doesn&apos;t need your attention.
           </h2>
           <div css={imageStyles}>
             <img src="2b.jpg" className="2b" alt="pic" />
