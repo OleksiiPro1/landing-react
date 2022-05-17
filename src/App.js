@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import myVideo from './1.mp4';
-import myVideoComponent from './video.js';
+import VideoComponent from './video.js';
 
 const divPStyle = css`
   max-width: 500px;
@@ -17,7 +16,6 @@ const imageStyles = css`
   display: flex;
 `;
 const divH1Styles = css`
-  background-color: grey;
   position: relative;
   z-index: 1;
   width: 100%;
@@ -43,7 +41,6 @@ const h1Styles = css`
   letter-spacing: -1px;
 `;
 const headerStyles = css`
-  background-color: grey;
   padding-right: 5%;
   padding-left: 5%;
   display: flex;
@@ -81,7 +78,7 @@ function App() {
     <div css={mainStyles}>
       <main>
         <div css={wrapperStyles}>
-          <myVideoComponent />
+          <VideoComponent />
           <header css={headerStyles}>
             <svg
               width="34"
@@ -119,7 +116,7 @@ function App() {
               </ul>
             </nav>
           </header>
-          <selection></selection>
+
           <div css={divH1Styles}>
             <h1 css={h1Styles}>
               Freedom behind
