@@ -1,7 +1,55 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import VideoComponent from './video.js';
+import VideoVertComponent from './video2.js';
 
+const thirdH2 = css`
+  z-index: 1;
+  margin-top: 0px;
+  font-size: 52px;
+  line-height: 58px;
+  font-weight: 400;
+  max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: 'NB International Pro', sans-serif;
+  position: relative;
+  bottom: 350px;
+  color: white;
+`;
+const divH2Second = css``;
+const divForSecondVideo = css`
+  z-index: 0;
+`;
+const secondH2 = css`
+  z-index: 1;
+  margin-top: 0px;
+  font-size: 52px;
+  line-height: 58px;
+  font-weight: 400;
+  max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: 'NB International Pro', sans-serif;
+  position: relative;
+  bottom: 850px;
+  color: white;
+`;
+const secondPStyle = css`
+  width: 100%;
+  max-width: 550px;
+  margin-top: 72px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  font-family: 'TWK Lausanne', sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 300;
+  margin-bottom: 150px;
+  margin-right: 150px;
+`;
 const divPStyle = css`
   max-width: 500px;
   margin-top: 16px;
@@ -10,20 +58,36 @@ const divPStyle = css`
   font-size: 22px;
   line-height: 32.5px;
   font-weight: 200;
+  margin-top: -50px;
+  font-family: 'NB International Pro', sans-serif;
 `;
 
 const imageStyles = css`
-  display: flex;
+  /*will-change: transform;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 100px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  opacity: 1;*/
+
+  height: 580px;
+  width: 1030px;
+  margin-top: 72px;
+  margin-left: 110px;
+  background-color: #dadada;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(2b.jpg);
 `;
 const divH1Styles = css`
-  background-color: grey;
   position: relative;
   z-index: 1;
-  width: 100%;
   max-width: 1320px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 230px;
+  margin-top: -400px;
   margin-left: 100px;
 `;
 const h2Styles = css`
@@ -31,6 +95,8 @@ const h2Styles = css`
   font-size: 52px;
   line-height: 58px;
   font-weight: 400;
+  margin-left: 100px;
+  font-family: 'NB International Pro', sans-serif;
 `;
 const h1Styles = css`
   font: 100px;
@@ -40,9 +106,9 @@ const h1Styles = css`
   line-height: 92px;
   font-weight: 500;
   letter-spacing: -1px;
+  font-family: 'NB International Pro', sans-serif;
 `;
 const headerStyles = css`
-  background-color: grey;
   padding-right: 5%;
   padding-left: 5%;
   display: flex;
@@ -81,6 +147,7 @@ function App() {
       <main>
         <div css={wrapperStyles}>
           <VideoComponent />
+
           <header css={headerStyles}>
             <svg
               width="34"
@@ -130,13 +197,32 @@ function App() {
             </div>
           </div>
         </div>
-        <div>
+        <div css={divH2Second}>
           <h2 css={h2Styles}>
             The first self-driving system so safe <br />
             that it doesn&apos;t need your attention.
           </h2>
           <div css={imageStyles}>
             <img src="2b.jpg" className="2b" alt="pic" />
+          </div>
+        </div>
+        <div>
+          <p css={secondPStyle}>
+            Ghost&apos;s unique approach sees and avoids situations that others
+            can&apos;t. Unlike driver-assistance systems that require constant
+            monitoring and last-minute intervention, Ghost needs no supervision.
+          </p>
+        </div>
+
+        <div>
+          <div css={divForSecondVideo}>
+            <VideoVertComponent />
+            <h2 css={secondH2}>
+              Breakthrough artificial <br />
+              intelligence that can manage <br />
+              any driving scenario.
+            </h2>
+            <h2 css={thirdH2}>A new way to drive.</h2>
           </div>
         </div>
       </main>
