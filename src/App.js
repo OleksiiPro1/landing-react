@@ -16,6 +16,7 @@ const imageStyles = css`
   display: flex;
 `;
 const divH1Styles = css`
+  background-color: grey;
   position: relative;
   z-index: 1;
   width: 100%;
@@ -41,6 +42,7 @@ const h1Styles = css`
   letter-spacing: -1px;
 `;
 const headerStyles = css`
+  background-color: grey;
   padding-right: 5%;
   padding-left: 5%;
   display: flex;

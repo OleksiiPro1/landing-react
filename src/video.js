@@ -10,6 +10,7 @@ class VideoComponent extends React.Component {
         preload="auto"
         autoPlay={true}
         loop={true}
+        muted={true}
       >
         <track kind="captions"></track>
         <source src={myVideo} type="video/mp4" />
